@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>500</height>
+    <width>1124</width>
+    <height>745</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,12 +18,135 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
-      <width>571</width>
-      <height>451</height>
+      <y>360</y>
+      <width>351</width>
+      <height>341</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_5">
+     <item>
+      <widget class="QLabel" name="dat_def">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Datei auswählen:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QLineEdit" name="file_14">
+         <property name="inputMask">
+          <string/>
+         </property>
+         <property name="text">
+          <string>File 2014</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="file_19">
+         <property name="inputMask">
+          <string/>
+         </property>
+         <property name="text">
+          <string>File 2019</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="bb_def">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Bounding Box definieren:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QLineEdit" name="x_coord">
+         <property name="text">
+          <string>X Koordinaten</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLineEdit" name="y_coord">
+         <property name="text">
+          <string>Y Koordinaten</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="bb_def_2">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Rastergrösse:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <item>
+        <widget class="QLineEdit" name="rastersize">
+         <property name="text">
+          <string>z.B. ...</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QPushButton" name="calculate">
+         <property name="text">
+          <string>Berechnen</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="save">
+         <property name="text">
+          <string>Speichern</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>488</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
      <item>
       <widget class="QLabel" name="title">
        <property name="font">
@@ -53,94 +176,6 @@
        </property>
        <property name="text">
         <string>Differenzkarte des Kantons Solothurn berechnen 2014 - 2019</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="dat_def">
-       <property name="font">
-        <font>
-         <pointsize>11</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Datei auswählen:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="file_14">
-       <property name="inputMask">
-        <string/>
-       </property>
-       <property name="text">
-        <string>File 2014</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="file_19">
-       <property name="inputMask">
-        <string/>
-       </property>
-       <property name="text">
-        <string>File 2019</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="bb_def">
-       <property name="font">
-        <font>
-         <pointsize>11</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Bounding Box definieren:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="x_coord">
-       <property name="text">
-        <string>X Koordinaten</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="y_coord">
-       <property name="text">
-        <string>Y Koordinaten</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="bb_def_2">
-       <property name="font">
-        <font>
-         <pointsize>11</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Rastergrösse:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="rastersize">
-       <property name="text">
-        <string>z.B. ...</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="calculate">
-       <property name="text">
-        <string>Berechnen</string>
        </property>
       </widget>
      </item>
