@@ -25,7 +25,7 @@ class ChangeDetection(QMainWindow):
     def get_files(self):
         options = QFileDialog.Options()
         options |= QFileDialog.DontUseNativeDialog
-        openfile, _ = QFileDialog.getOpenFileNames(self, "Files auswählen", "", "LAS-Punktwolke(*.las *.laz)", options=options)
+        openfile, _ = QFileDialog.getOpenFileNames(self, "Files auswählen", "", "Punktwolke(*.las *.laz)", options=options)
 
 
     def x_min(self):
