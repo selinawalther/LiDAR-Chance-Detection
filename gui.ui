@@ -6,175 +6,33 @@
    <rect>
     <x>0</x>
     <y>0</y>
+<<<<<<< Updated upstream
     <width>573</width>
     <height>745</height>
+=======
+    <width>900</width>
+    <height>500</height>
+>>>>>>> Stashed changes
    </rect>
   </property>
   <property name="windowTitle">
    <string>LiDAR Chance Detection</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="verticalLayoutWidget_5">
+   <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
+<<<<<<< Updated upstream
       <x>10</x>
       <y>270</y>
       <width>351</width>
       <height>431</height>
-     </rect>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_5">
-     <item>
-      <widget class="QLabel" name="dat_def">
-       <property name="font">
-        <font>
-         <pointsize>11</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Datei auswählen:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout">
-       <item>
-        <widget class="QLineEdit" name="file_14">
-         <property name="inputMask">
-          <string/>
-         </property>
-         <property name="text">
-          <string>File 2014</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="file_19">
-         <property name="inputMask">
-          <string/>
-         </property>
-         <property name="text">
-          <string>File 2019</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_5">
-       <item>
-        <widget class="QPushButton" name="filedialog_old">
-         <property name="text">
-          <string>Filedialog_old</string>
-         </property>
-         <property name="autoDefault">
-          <bool>false</bool>
-         </property>
-         <property name="default">
-          <bool>false</bool>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="filedialog_new">
-         <property name="text">
-          <string>filedialog_new</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <widget class="QLabel" name="bb_def">
-       <property name="font">
-        <font>
-         <pointsize>11</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Bounding Box definieren:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_2">
-       <item>
-        <widget class="QLineEdit" name="x_coord">
-         <property name="text">
-          <string>X Koordinaten</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLineEdit" name="y_coord">
-         <property name="text">
-          <string>Y Koordinaten</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <widget class="QPushButton" name="bb_max">
-       <property name="text">
-        <string>BoundingBox_max</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="bb_def_2">
-       <property name="font">
-        <font>
-         <pointsize>11</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Rastergrösse:</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_3">
-       <item>
-        <widget class="QLineEdit" name="rastersize">
-         <property name="text">
-          <string>z.B. ...</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-     <item>
-      <layout class="QHBoxLayout" name="horizontalLayout_4">
-       <item>
-        <widget class="QPushButton" name="calculate">
-         <property name="text">
-          <string>Berechnen</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QPushButton" name="save">
-         <property name="text">
-          <string>Speichern</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QWidget" name="verticalLayoutWidget">
-    <property name="geometry">
-     <rect>
+=======
       <x>20</x>
       <y>10</y>
       <width>488</width>
       <height>58</height>
+>>>>>>> Stashed changes
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout">
@@ -207,6 +65,157 @@
        </property>
        <property name="text">
         <string>Differenzkarte des Kantons Solothurn berechnen 2014 - 2019</string>
+       </property>
+      </widget>
+     </item>
+<<<<<<< Updated upstream
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QPushButton" name="filedialog_old">
+         <property name="text">
+          <string>Filedialog_old</string>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+         <property name="default">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="filedialog_new">
+         <property name="text">
+          <string>filedialog_new</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <widget class="QLabel" name="bb_def">
+=======
+    </layout>
+   </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>180</y>
+      <width>311</width>
+      <height>281</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="user_interface">
+     <item row="3" column="0">
+      <widget class="QLineEdit" name="x_coord_min">
+       <property name="text">
+        <string>X Min Koordinaten</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QComboBox" name="comboBox"/>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="dat_def">
+>>>>>>> Stashed changes
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Datei auswählen:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLineEdit" name="x_coord_max">
+       <property name="text">
+        <string>X Max Koordinaten</string>
+       </property>
+      </widget>
+     </item>
+<<<<<<< Updated upstream
+     <item>
+      <widget class="QPushButton" name="bb_max">
+       <property name="text">
+        <string>BoundingBox_max</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+=======
+     <item row="5" column="0">
+>>>>>>> Stashed changes
+      <widget class="QLabel" name="bb_def_2">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Rastergrösse:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLineEdit" name="rastersize">
+       <property name="text">
+        <string>z.B. ...</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="bb_def">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
+       </property>
+       <property name="text">
+        <string>Bounding Box definieren:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="y_coord_min">
+       <property name="text">
+        <string>Y Min Koordinaten</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="y_coord_max">
+       <property name="text">
+        <string>Y Max Koordinaten</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QComboBox" name="file_19">
+       <property name="currentText">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QPushButton" name="calculate">
+       <property name="text">
+        <string>Berechnen</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QPushButton" name="save">
+       <property name="text">
+        <string>Speichern</string>
        </property>
       </widget>
      </item>
