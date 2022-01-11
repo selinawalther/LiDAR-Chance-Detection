@@ -68,20 +68,23 @@ class DTM():
 
 
 # inputs
-str_las_input = "laz2014_610230.laz"
+str_las_input = "C:/Users/joelb/lidardaten/2014/laz2014_609225.laz"
 
-flt_x_min = 2610000.0
-flt_x_max = 2610010.0
-flt_y_min = 1230000.0
-flt_y_max = 1230010.0
-flt_z_min = 400.0
-flt_z_max = 500.0
 
-flt_raster_size = 1
+las = pylas.read(str_las_input)
+
+flt_x_min = np.amin(las.x)
+flt_x_max = np.amax(las.x)
+flt_y_min = np.amin(las.y)
+flt_y_max = np.amax(las.y)
+flt_z_min = np.amin(las.z)
+flt_z_max = np.amin(las.z)
+
+flt_raster_size = 2
 
 dtm = DTM(flt_x_min, flt_x_max, flt_y_min, flt_y_max, flt_raster_size)
 
-las = pylas.read(str_las_input)
+
 points = np.vstack((las.x, las.y, las.z)).T
 las = None
 t_start = time.time()
@@ -89,3 +92,34 @@ dtm.add_pointcloud(points, min(points[:, 2]), max(points[:, 2]))
 t_stop = time.time()
 print(dtm.raster)
 print('well done! - within {} s'.format(t_stop - t_start))
+
+
+
+import numpy as np
+from osgeo import gdal
+from osgeo import osr
+
+array = dtm.raster
+# My image array
+
+# For each pixel I know it's latitude and longitude.
+# As you'll see below you only really need the coordinates of
+# one corner, and the resolution of the file.
+
+nrows,ncols = np.shape(array)
+geotransform=(flt_x_min,flt_raster_size,0,flt_y_max,0, -flt_raster_size)
+
+# That's (top left x, w-e pixel resolution, rotation (0 if North is up),
+#         top left y, rotation (0 if North is up), n-s pixel resolution)
+# I don't know why rotation is in twice???
+
+output_raster = gdal.GetDriverByName('GTiff').Create('myraster.tif',ncols, nrows, 1 ,gdal.GDT_Float32)  # Open the file
+output_raster.SetGeoTransform(geotransform)  # Specify its coordinates
+srs = osr.SpatialReference()                 # Establish its coordinate encoding
+srs.ImportFromEPSG(2056)                     # This one specifies LV95.
+
+output_raster.SetProjection( srs.ExportToWkt() )   # Exports the coordinate system
+                                                   # to the file
+output_raster.GetRasterBand(1).WriteArray(array)   # Writes my array to the raster
+
+output_raster.FlushCache()

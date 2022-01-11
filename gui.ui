@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1124</width>
+    <width>573</width>
     <height>745</height>
    </rect>
   </property>
@@ -18,9 +18,9 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>360</y>
+      <y>270</y>
       <width>351</width>
-      <height>341</height>
+      <height>431</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -61,6 +61,30 @@
       </layout>
      </item>
      <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <item>
+        <widget class="QPushButton" name="filedialog_old">
+         <property name="text">
+          <string>Filedialog_old</string>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+         <property name="default">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="filedialog_new">
+         <property name="text">
+          <string>filedialog_new</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
       <widget class="QLabel" name="bb_def">
        <property name="font">
         <font>
@@ -91,6 +115,13 @@
         </widget>
        </item>
       </layout>
+     </item>
+     <item>
+      <widget class="QPushButton" name="bb_max">
+       <property name="text">
+        <string>BoundingBox_max</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QLabel" name="bb_def_2">
