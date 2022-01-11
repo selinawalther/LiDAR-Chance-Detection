@@ -11,6 +11,7 @@ class ChangeDetection(QMainWindow):
 
         #self.berechnen.clicked.connect(self.calculate)
         self.speichern.clicked.connect(self.save)
+        self.oeffnen.clicked.connect(self.get_files)
 
     #def calculate(self):
 
@@ -20,6 +21,12 @@ class ChangeDetection(QMainWindow):
         fileName, _ = QFileDialog.getSaveFileName(self, "Datei speichern", "", "GeoTiff(*.tiff)", options=options)
         if fileName:
             print(fileName)
+
+    def get_files(self):
+        options = QFileDialog.Options()
+        options |= QFileDialog.DontUseNativeDialog
+        openfile, _ = QFileDialog.getOpenFileNames(self, "Files auswählen", "", "LAS-Punktwolke(*.las *.laz)", options=options)
+
 
     def x_min(self):
         input = QInputDialog.getDouble(self, "x_coord_min", "Minimale X-Koordinate", deicmals=3)
