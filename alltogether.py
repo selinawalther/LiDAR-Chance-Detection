@@ -17,17 +17,12 @@ class ChangeDetection(QMainWindow):
 
         self.berechnen.clicked.connect(self.calculate)
 
-    def save(self):
-        options = QFileDialog.Options()
-        options |= QFileDialog.DontUseNativeDialog
-        filename = QFileDialog.getSaveFileName(self, "Datei speichern", "", "GeoTiff(*.tiff)", options=options)
-        print(filename)
-
     def get_files(self):
         global path_a
         global path_b
         path_a = QInputDialog.getText(self, "pfad_a", "Pfad zu Dateien")
         path_b = QInputDialog.getText(self, "pfad_b", "Pfad zu Dateien")
+        print(path_a, path_b)
 
     def cooridnates(self):
         global minx
@@ -40,12 +35,14 @@ class ChangeDetection(QMainWindow):
         maxx = QInputDialog.getInt(self, "x_coord_max", "Minimale X-Koordinate", deicmals=3)
         maxy = QInputDialog.getInt(self, "y_coord_max", "Minimale X-Koordinate", deicmals=3)
         extent = (minx, miny, maxx, maxy)
+        print(minx, miny, maxx, maxy)
 
     def year(self):
         global prefix_a
         global prefix_b
         prefix_a = year_a.currentText()
         prefix_b = year_b.currentText()
+        print(prefix_a, prefix_b)
 
     def Raster_Bild_erstellen(extent, path, prefix):
         # Get all las or laz Files in Directory
@@ -54,7 +51,7 @@ class ChangeDetection(QMainWindow):
         for i in range(len(files)):
             files[i] = files[i].replace('\\', '/')
 
-        # write Tiff file from importiert Pointclouds one Cloud at a time
+        # write Tiff file from imported Pointclouds one Cloud at a time
         for i in range(len(files)):
             pdal_json = '''
             [
