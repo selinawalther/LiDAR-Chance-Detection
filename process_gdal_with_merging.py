@@ -4,8 +4,10 @@ from osgeo import gdalconst
 import glob
 import os
 
+extent = '"bounds": "([2609000, 2609500],[1225000,1225500])",'
 path = "C:/Users/joelb/lidardaten/2014_transformiert/"
 prefix = "2014"
+
 
 files = glob.glob(path + "*.la*")
 
@@ -24,12 +26,18 @@ for i in range(len(files)):
         "gdaldriver": "GTiff",
         "output_type": "min",
         "resolution": "1",
+        "radius": "1.4",
+        {}
         "type": "writers.gdal"
         {}
     ]
     '''
 
-    pdal_json = pdal_json.format(files[i], '{', prefix, i, '}')
+    if extent == None:
+        pdal_json = pdal_json.format(files[i], '{', prefix, i, '', '}')
+    else:
+        pdal_json = pdal_json.format(files[i], '{', prefix, i, extent, '}')
+
 
     pipeline = pdal.Pipeline(pdal_json)
     count = pipeline.execute()
@@ -58,5 +66,9 @@ minx = geoTransform[0]
 maxy = geoTransform[3]
 maxx = minx + geoTransform[1] * data.RasterXSize
 miny = maxy + geoTransform[5] * data.RasterYSize
-print(minx, miny, maxx, maxy)
+
+extent = '"bounds": "([' + str(minx) +', ' + str(maxx) + '],[' + str(miny) + ', ' + str(maxy) + '])",'
+
+print(extent)
+
 data = None
