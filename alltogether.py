@@ -23,13 +23,6 @@ class ChangeDetection(QMainWindow):
         self.show()
 
 
-
-    def save(self):
-        options = QFileDialog.Options()
-        options |= QFileDialog.DontUseNativeDialog
-        filename = QFileDialog.getSaveFileName(self, "Datei speichern", "", "GeoTiff(*.tiff)", options=options)
-        print(filename)
-
     def get_files(self):
         global path_a
         global path_b
