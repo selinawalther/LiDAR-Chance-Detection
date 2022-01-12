@@ -17,8 +17,8 @@
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>10</y>
+      <x>10</x>
+      <y>30</y>
       <width>488</width>
       <height>58</height>
      </rect>
@@ -68,61 +68,28 @@
      </rect>
     </property>
     <layout class="QGridLayout" name="user_interface">
-     <item row="3" column="0">
-      <widget class="QLineEdit" name="x_coord_min">
-       <property name="text">
-        <string>X Min Koordinaten</string>
-       </property>
-      </widget>
-     </item>
      <item row="7" column="0">
-      <widget class="QPushButton" name="berechnen">
-       <property name="text">
-        <string>Berechnen</string>
-       </property>
-      </widget>
-     </item>
-     <item row="0" column="0">
-      <widget class="QLabel" name="dat_def">
-       <property name="font">
-        <font>
-         <pointsize>11</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Daten auswählen:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="0">
-      <widget class="QLineEdit" name="x_coord_max">
-       <property name="text">
-        <string>X Max Koordinaten</string>
-       </property>
-      </widget>
-     </item>
-     <item row="5" column="0">
-      <widget class="QLabel" name="bb_def_2">
-       <property name="font">
-        <font>
-         <pointsize>11</pointsize>
-         <weight>50</weight>
-         <bold>false</bold>
-        </font>
-       </property>
-       <property name="text">
-        <string>Rastergrösse:</string>
-       </property>
-      </widget>
-     </item>
-     <item row="6" column="0">
       <widget class="QLineEdit" name="rastersize">
        <property name="text">
         <string>z.B. ...</string>
        </property>
       </widget>
      </item>
+     <item row="4" column="0">
+      <widget class="QLineEdit" name="x_coord_min">
+       <property name="text">
+        <string>X Min Koordinate</string>
+       </property>
+      </widget>
+     </item>
      <item row="2" column="0">
+      <widget class="QLineEdit" name="pfad_b">
+       <property name="text">
+        <string>Pfad zu Daten</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
       <widget class="QLabel" name="bb_def">
        <property name="font">
         <font>
@@ -136,31 +103,98 @@
        </property>
       </widget>
      </item>
-     <item row="3" column="1">
-      <widget class="QLineEdit" name="y_coord_min">
-       <property name="text">
-        <string>Y Min Koordinaten</string>
+     <item row="6" column="0">
+      <widget class="QLabel" name="bb_def_2">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+         <weight>50</weight>
+         <bold>false</bold>
+        </font>
        </property>
-      </widget>
-     </item>
-     <item row="7" column="1">
-      <widget class="QPushButton" name="speichern">
        <property name="text">
-        <string>Speichern</string>
-       </property>
-      </widget>
-     </item>
-     <item row="4" column="1">
-      <widget class="QLineEdit" name="y_coord_max">
-       <property name="text">
-        <string>Y Max Koordinaten</string>
+        <string>Rastergrösse:</string>
        </property>
       </widget>
      </item>
      <item row="1" column="0">
-      <widget class="QPushButton" name="oeffnen">
+      <widget class="QLineEdit" name="pfad_a">
        <property name="text">
-        <string>Files</string>
+        <string>Pfad zu Daten</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLineEdit" name="x_coord_max">
+       <property name="text">
+        <string>X Max Koordinate</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="y_coord_max">
+       <property name="text">
+        <string>Y Max Koordinate</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QLineEdit" name="y_coord_min">
+       <property name="text">
+        <string>Y Min Koordinate</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QComboBox" name="year_b">
+       <property name="text" stdset="0">
+        <string>year</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>2014</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2019</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="dat_def">
+       <property name="font">
+        <font>
+         <pointsize>11</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string>Ordner auswählen:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QComboBox" name="year_a">
+       <property name="text" stdset="0">
+        <string>year</string>
+       </property>
+       <item>
+        <property name="text">
+         <string>2014</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>2019</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="8" column="0">
+      <widget class="QPushButton" name="berechnen">
+       <property name="text">
+        <string>Berechnen</string>
        </property>
       </widget>
      </item>
