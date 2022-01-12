@@ -13,9 +13,16 @@ class ChangeDetection(QMainWindow):
     def __init__(self):
         super().__init__()
         loadUi('gui_v2.ui', self)
+
+        self.input = self.findChild(QLineEdit, 'pfad_a')
+        print(self.input.text())
+
+        self.button = self.findChild(QPushButton, 'berechnen')  # Find the button
+        self.button.clicked.connect(print("gugus")) #self.calculate
+
         self.show()
 
-        self.berechnen.clicked.connect(self.calculate)
+
 
     def save(self):
         options = QFileDialog.Options()
@@ -28,6 +35,8 @@ class ChangeDetection(QMainWindow):
         global path_b
         path_a = QInputDialog.getText(self, "pfad_a", "Pfad zu Dateien")
         path_b = QInputDialog.getText(self, "pfad_b", "Pfad zu Dateien")
+        print(path_a)
+
 
     def cooridnates(self):
         global minx
@@ -111,6 +120,11 @@ class ChangeDetection(QMainWindow):
         return extent
 
     def calculate(self):
+        path_a = self.pfad_a.text()
+        print(path_a)
+        path_b = self.pfad_b.text()
+        prefix_a = self.year_a.text()
+        prefix_b = self.year_b.text()
         extent = None
         extent = Raster_Bild_erstellen(extent, path_a, prefix_a)
         Raster_Bild_erstellen(extent, path_b, prefix_b)
