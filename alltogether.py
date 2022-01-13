@@ -12,7 +12,7 @@ from PyQt5.QtWidgets import *
 class ChangeDetection(QMainWindow):
     def __init__(self):
         super().__init__()
-        loadUi('gui_v2.ui', self)
+        loadUi('gui.ui', self)
 
         self.input = self.findChild(QLineEdit, 'pfad_a')
         print(self.input.text())
@@ -93,7 +93,7 @@ class ChangeDetection(QMainWindow):
         gdal.Translate("merged_" + prefix + ".tif", vrt, xRes=1, yRes=-1)
         vrt = None
 
-        # delete generatet Tiff Tiles (exept the big merged one)
+        # delete generatet Tiff Tiles (except the big merged one)
         for i in range(len(files)):
             os.remove("outpython_" + prefix + "_" + str(i) + ".tif")
 
