@@ -4,6 +4,7 @@ from osgeo import gdalconst
 import glob
 import os
 
+
 def Raster_Bild_erstellen(extent, path, prefix):
     # Get all las or laz Files in Directory
     files = glob.glob(path + "*.la*")
